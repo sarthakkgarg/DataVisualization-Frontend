@@ -6,11 +6,51 @@ import { ResponsiveBar } from '@nivo/bar'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveBar = ( { data  /* see data tab */ }) => (
+const MyResponsiveBar = (props) => {
+    
+    let data = [
+        {
+            "topic": "gas",
+            "Intensity": props.state.gasIntensity,
+            "hot dogColor": "hsl(86, 70%, 50%)",
+        },
+        // {
+        //     "topic": "oil",
+        //     "Intensity": props.state.oilIntensity,
+        //     "hot dogColor": "hsl(85, 70%, 50%)",
+        // },
+        {
+            "topic": "export",
+            "Intensity": props.state.exporteIntensity,
+            "hot dogColor": "hsl(86, 70%, 50%)",
+        },
+        {
+            "topic": "production",
+            "Intensity": props.state.productionIntensity,
+            "hot dogColor": "hsl(50, 70%, 50%)",
+        },
+        {
+            "topic": "enviroment",
+            "Intensity": props.state.enviromentIntensity,
+            "hot dogColor": "hsl(267, 70%, 50%)",
+        },
+        {
+            "topic": "battery",
+            "Intensity": props.state.batteryIntensity,
+            "hot dogColor": "hsl(202, 70%, 50%)",
+        },
+        {
+            "topic": "biofuel",
+            "Intensity": props.state.biofuelIntensity,
+            "hot dogColor": "hsl(269, 70%, 50%)",
+        }
+    ]
+    
+    return (
     <>
     <ResponsiveBar
         data={data}
-        keys={[ 'hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut' ]}
+        keys={[ 'Intensity' ]}
         indexBy="topic"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
@@ -67,7 +107,7 @@ const MyResponsiveBar = ( { data  /* see data tab */ }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'food',
+            legend: 'Intensity',
             legendPosition: 'middle',
             legendOffset: -40
         }}
@@ -100,5 +140,5 @@ const MyResponsiveBar = ( { data  /* see data tab */ }) => (
         ]}
     />
     </>
-)
+)}
 export default MyResponsiveBar
