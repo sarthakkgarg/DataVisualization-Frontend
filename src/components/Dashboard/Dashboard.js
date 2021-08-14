@@ -9,9 +9,9 @@ function Dashboard(props) {
   return (
     <>
 
-        <div style={{height:"500px", width:"1000px"}}>
+
           <Treemap/>
-        </div>
+
      
 
     </>
