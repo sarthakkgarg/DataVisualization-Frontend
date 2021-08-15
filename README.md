@@ -25,7 +25,6 @@ Steps to Run the App
 <li>after completion, Run "npm start" command to start the server</li>
   </ul>
   
-  
-  
-  
+  <h1>Screenshot</h1>
+  <img src="/1.png" </img>
   
